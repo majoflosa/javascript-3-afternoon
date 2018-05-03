@@ -84,15 +84,24 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-function removeDuplicates( arr ) {
-  var checkedAccidents = [];
+function removeDuplicates() {
+  // var checkedAccidents = [];
 
-  for ( let i = 0; i < arr.length; i++ ) {
-    if ( checkedAccidents.includes(workplaceAccidents[i]) ) workplaceAccidents.splice(i, 1);
-    checkedAccidents.push( workplaceAccidents[i] );
+  // for ( let i = 0; i < arr.length; i++ ) {
+  //   if ( checkedAccidents.includes(workplaceAccidents[i]) ) workplaceAccidents.splice(i, 1);
+  //   checkedAccidents.push( workplaceAccidents[i] );
+  // }
+
+  for ( let i = 0; i < workplaceAccidents.length; i++ ) {
+
+    for ( let j = 0; j < workplaceAccidents.length; j++ ) {
+      if ( workplaceAccidents[i] == workplaceAccidents[j] ) {
+        workplaceAccidents.splice(i, 1);
+      }
+    }
+    return workplaceAccidents;
   }
 
-  return workplaceAccidents;
 }
 
 

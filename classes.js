@@ -185,8 +185,6 @@ class Machine {
     function rebootDone() {
       this.wear_and_tear_count -= 10;
       this.needs_reboot = false;
-
-      // console.log( 'reboot done' );
     }
 
     return rebootDone.bind(this);
